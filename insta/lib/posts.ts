@@ -14,7 +14,7 @@ export const getPostIds = async () => {
   })
   const posts = await apiRes.json()
 
-  return posts.map((post) => {
+  return posts.map((post: any) => {
     return {
       params: {
         id: String(post.id)

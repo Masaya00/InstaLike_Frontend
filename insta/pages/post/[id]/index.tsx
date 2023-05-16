@@ -8,13 +8,13 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 
-const fetcher = (url) => fetch(url).then((res) => res.json())
+const fetcher = (url: string) => fetch(url).then((res) => res.json())
 
-const DetailPost = ({ staticPost, id }) => {
-  const dispatch = useDispatch()
+const DetailPost = ({ staticPost, id }: any) => {
+  const dispatch: any = useDispatch()
   const router = useRouter()
-  const user = useSelector((state) => state.auth.user)
-  const delete_post_success = useSelector((state) => state.post.delete_post_success)
+  const user = useSelector((state: any) => state.auth.user)
+  const delete_post_success = useSelector((state: any) => state.post.delete_post_success)
 
   const { data: post, mutate } = useSWR(
     `${process.env.NEXT_PUBLIC_API_URL}/api/post_detail/${id}/`,
@@ -120,7 +120,7 @@ export async function getStaticPaths() {
   }
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params }: any) {
   const staticPost = await getPostDetail(params.id)
 
   return {

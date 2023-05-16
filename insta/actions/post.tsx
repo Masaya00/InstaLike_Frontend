@@ -114,7 +114,7 @@ export const edit_post = (id: number, title: string, image: any, content: string
 
 
 // 投稿削除
-export const delete_post = (id) => async (dispatch: any) => {
+export const delete_post = (id: number) => async (dispatch: any) => {
   dispatch({
     type: SET_POST_LOADING,
   })

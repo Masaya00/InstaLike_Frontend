@@ -11,8 +11,8 @@ import {
 } from '@heroicons/react/outline'
 
 const Navigation = () => {
-  const dispatch = useDispatch()
-  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated)
+  const dispatch: any = useDispatch()
+  const isAuthenticated = useSelector((state: any) => state.auth.isAuthenticated)
 
   const logoutHandler = async () => {
     if (dispatch && dispatch !== null && dispatch !== undefined) {

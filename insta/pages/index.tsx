@@ -11,8 +11,8 @@ import Image from 'next/image'
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json())
 
-const Index = ({ staticPosts }) => {
-  const dispatch = useDispatch()
+const Index = ({ staticPosts }: any) => {
+  const dispatch: any = useDispatch()
   const router = useRouter()
   const user = useSelector((state: any) => state.auth.user)
   const isAuthenticated = useSelector((state: any) => state.auth.isAuthenticated)

@@ -9,8 +9,8 @@ import Head from 'next/head'
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json())
 
-const EditPost = ({ staticPost, id }) => {
-  const dispatch = useDispatch()
+const EditPost = ({ staticPost, id }: any) => {
+  const dispatch: any = useDispatch()
   const router = useRouter()
   const loading = useSelector((state: any) => state.post.loading)
   const edit_post_success = useSelector((state: any) => state.post.edit_post_success)
@@ -40,12 +40,12 @@ const EditPost = ({ staticPost, id }) => {
   const { title, content } = formData
 
   // 入力
-  const onChange = (e) => {
+  const onChange = (e: any) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
   // 編集
-  const onSubmit = async (e) => {
+  const onSubmit = async (e: any) => {
     e.preventDefault()
 
     if (dispatch && dispatch !== null && dispatch !== undefined && post) {

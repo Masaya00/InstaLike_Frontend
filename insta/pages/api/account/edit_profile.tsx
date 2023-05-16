@@ -3,7 +3,7 @@ import cookie from 'cookie'
 const edit_profile = async (req: any, res: any) => {
   if (req.method === 'GET') {
     const cookies = cookie.parse(req.headers.cookie ?? '')
-    const access = cookies.access ?? false
+    const access: any = cookies.access ?? false
 
     if (access === false) {
       return res.status(401).json({

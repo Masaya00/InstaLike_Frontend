@@ -6,11 +6,11 @@ import Loader from 'react-loader-spinner'
 import Head from 'next/head'
 
 const Profile = () => {
-  const dispatch = useDispatch()
+  const dispatch: any = useDispatch()
   const router = useRouter()
-  const edit_profile_success = useSelector((state) => state.auth.edit_profile_success)
-  const user = useSelector((state) => state.auth.user)
-  const loading = useSelector((state) => state.auth.loading)
+  const edit_profile_success = useSelector((state: any) => state.auth.edit_profile_success)
+  const user = useSelector((state: any) => state.auth.user)
+  const loading = useSelector((state: any) => state.auth.loading)
   const [image, setImage] = useState(null)
 
   const [formData, setFormData] = useState({
