@@ -20,7 +20,7 @@ import {
 } from './types'
 
 // 新規投稿
-export const new_post = (title, image, content) => async (dispatch) => {
+export const new_post = (title: string, image: any, content: string) => async (dispatch: any) => {
   dispatch({
     type: SET_POST_LOADING,
   })
@@ -66,7 +66,7 @@ export const new_post = (title, image, content) => async (dispatch) => {
 
 
 // 投稿編集
-export const edit_post = (id, title, image, content) => async (dispatch) => {
+export const edit_post = (id: number, title: string, image: any, content: string) => async (dispatch: any) => {
   dispatch({
     type: SET_POST_LOADING,
   })
@@ -114,7 +114,7 @@ export const edit_post = (id, title, image, content) => async (dispatch) => {
 
 
 // 投稿削除
-export const delete_post = (id) => async (dispatch) => {
+export const delete_post = (id) => async (dispatch: any) => {
   dispatch({
     type: SET_POST_LOADING,
   })
@@ -154,7 +154,7 @@ export const delete_post = (id) => async (dispatch) => {
 
 
 // 状態解除
-export const reset_post_status = () => (dispatch) => {
+export const reset_post_status = () => (dispatch: any) => {
   dispatch({
     type: RESET_POST_STATUS,
   })
