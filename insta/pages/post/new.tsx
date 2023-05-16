@@ -46,7 +46,7 @@ const NewPost = () => {
       <div className="text-center text-2xl mb-5">新規投稿</div>
       <form className="md:w-1/3 mx-auto" onSubmit={onSubmit}>
         <div className="mb-4">
-          <div className="mb-1" htmlFor="title">
+          <div className="mb-1">
             タイトル
           </div>
           <input
@@ -64,12 +64,11 @@ const NewPost = () => {
           <input type="file" onChange={(e) => setImage(e.target.files[0])} required />
         </div>
         <div className="mb-4">
-          <div className="mb-1" htmlFor="content">
+          <div className="mb-1">
             説明
           </div>
           <textarea
             className="input-form h-72"
-            type="text"
             name="content"
             placeholder="説明"
             onChange={onChange}

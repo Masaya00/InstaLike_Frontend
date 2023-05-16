@@ -55,7 +55,7 @@ const Profile = () => {
       <div className="text-center text-2xl mb-5">プロフィール</div>
       <form className="w-1/3 mx-auto" onSubmit={onSubmit}>
         <div className="mb-4">
-          <div className="mb-1" htmlFor="name">
+          <div className="mb-1">
             名前
           </div>
           <input
