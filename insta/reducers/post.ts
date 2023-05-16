@@ -26,7 +26,7 @@ const initialState = {
   delete_post_success: false,
 }
 
-const postReducer = (state = initialState, action) => {
+const postReducer = (state = initialState, action: any) => {
   const { type, payload } = action
 
   switch (type) {
