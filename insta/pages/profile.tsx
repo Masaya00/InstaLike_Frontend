@@ -70,7 +70,7 @@ const Profile = () => {
         </div>
         <div className="mb-4">
           <div className="mb-1">プロフィール画像</div>
-          <input type="file" onChange={(e) => setImage(e.target.files[0])} />
+          <input type="file" onChange={(e: any) => setImage(e.target.files[0])} />
         </div>
 
         <div className="flex justify-center">

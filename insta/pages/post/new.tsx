@@ -61,7 +61,7 @@ const NewPost = () => {
         </div>
         <div className="mb-4">
           <div className="mb-1">画像</div>
-          <input type="file" onChange={(e) => setImage(e.target.files[0])} required />
+          <input type="file" onChange={(e: any) => setImage(e.target.files[0])} required />
         </div>
         <div className="mb-4">
           <div className="mb-1">
