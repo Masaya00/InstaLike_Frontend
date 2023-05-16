@@ -99,13 +99,16 @@ const EditPost = ({ staticPost, id }: any) => {
         </div>
 
         <div className="flex justify-center">
-          {loading ? (
+          {/* {loading ? (
             <Loader type="Oval" color="#F59E00" width={50} height={50} />
           ) : (
             <button className="button-yellow" type="submit">
               送信
             </button>
-          )}
+          )} */}
+          <button className="button-yellow" type="submit">
+              送信
+          </button>
         </div>
       </form>
     </>
@@ -122,7 +125,7 @@ export async function getStaticPaths() {
   }
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params }: any) {
   const staticPost = await getPostDetail(params.id)
 
   return {
