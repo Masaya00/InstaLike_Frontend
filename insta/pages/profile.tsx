@@ -28,12 +28,12 @@ const Profile = () => {
   }, [user])
 
   // 入力
-  const onChange = (e) => {
+  const onChange = (e: any) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
   // プロフィール編集
-  const onSubmit = async (e) => {
+  const onSubmit = async (e: any) => {
     e.preventDefault()
 
     if (dispatch && dispatch !== null && dispatch !== undefined && user) {

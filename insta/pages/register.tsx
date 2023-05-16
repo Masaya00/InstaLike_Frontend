@@ -7,7 +7,7 @@ import Head from "next/head";
 
 
 const Register = () => {
-  const dispatch = useDispatch()
+  const dispatch: any = useDispatch()
   const router = useRouter()
   const isAuthenticated = useSelector((state: any) => state.auth.isAuthenticated)
   const loading = useSelector((state: any) => state.auth.loading)
@@ -21,7 +21,6 @@ const Register = () => {
   const {name, email, password} = formData
 
   const onSubmit = async (e: any) => {
-    console.log(1)
     e.preventDefault()
 
     // actions/authで定義した

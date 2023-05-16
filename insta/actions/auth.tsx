@@ -248,7 +248,7 @@ export const logout = () => async (dispatch: any) => {
 }
 
 // プロフィール編集
-export const edit_profile = (id: number, name: string, image: string) => async (dispatch: any) => {
+export const edit_profile = (id: number, name: string, image: any) => async (dispatch: any) => {
   dispatch({
     type: SET_AUTH_LOADING,
   })

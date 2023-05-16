@@ -7,7 +7,7 @@ import Head from "next/head";
 
 const Login = () => {
   // Reduxで使うストアオブジェクトの状態を変更するためのアクション
-  const dispatch = useDispatch();
+  const dispatch: any = useDispatch();
   const router = useRouter()
   // useSelectorはストア内の状態をコンポーネントから取得するために使用されるフック
   const isAuthenticated = useSelector((state: any) => state.auth.isAuthenticated)
