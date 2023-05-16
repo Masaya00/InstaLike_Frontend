@@ -1,5 +1,4 @@
 const register_api = async(req: any, res: any) => {
-  console.log('呼び出されている？')
   if (req.method === 'POST') {
     const {name, email, password} = req.body
 

@@ -6,7 +6,7 @@ import Loader from 'react-loader-spinner'
 import Head from 'next/head'
 
 const NewPost = () => {
-  const dispatch = useDispatch()
+  const dispatch: any= useDispatch()
   const router = useRouter()
   const loading = useSelector((state: any) => state.post.loading)
   const new_post_success = useSelector((state: any) => state.post.new_post_success)
@@ -19,12 +19,12 @@ const NewPost = () => {
   const { title, content } = formData
 
   // 入力
-  const onChange = (e) => {
+  const onChange = (e: any) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
   // 新規投稿
-  const onSubmit = async (e) => {
+  const onSubmit = async (e: any) => {
     e.preventDefault()
 
     if (dispatch && dispatch !== null && dispatch !== undefined) {

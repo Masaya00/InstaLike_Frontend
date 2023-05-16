@@ -36,7 +36,7 @@ import {
 } from './types'
 
 // ユーザー登録
-export const register = (name: string, email: string, password: string) => async (dispatch) => {
+export const register = (name: string, email: string, password: string) => async (dispatch: any) => {
   dispatch({
     type: SET_AUTH_LOADING,
   })
@@ -78,7 +78,7 @@ export const register = (name: string, email: string, password: string) => async
 }
 
 // ログイン
-export const login = (email: string, password: string) => async (dispatch) => {
+export const login = (email: string, password: string) => async (dispatch: any) => {
   dispatch({
     type: SET_AUTH_LOADING,
   })
@@ -119,7 +119,7 @@ export const login = (email: string, password: string) => async (dispatch) => {
 }
 
 // ユーザー情報取得
-export const user = () => async (dispatch) => {
+export const user = () => async (dispatch: any) => {
   dispatch({
     type: SET_AUTH_LOADING,
   })
@@ -153,7 +153,7 @@ export const user = () => async (dispatch) => {
 }
 
 // リフレッシュトークン
-export const refresh = () => async (dispatch) => {
+export const refresh = () => async (dispatch: any) => {
   dispatch({
     type: SET_AUTH_LOADING,
   })
@@ -185,7 +185,7 @@ export const refresh = () => async (dispatch) => {
 }
 
 // 認証チェック
-export const verify = () => async (dispatch) => {
+export const verify = () => async (dispatch: any) => {
   dispatch({
     type: SET_AUTH_LOADING,
   })
@@ -217,7 +217,7 @@ export const verify = () => async (dispatch) => {
 }
 
 // ログアウト
-export const logout = () => async (dispatch) => {
+export const logout = () => async (dispatch: any) => {
   dispatch({
     type: SET_AUTH_LOADING,
   })
@@ -248,7 +248,7 @@ export const logout = () => async (dispatch) => {
 }
 
 // プロフィール編集
-export const edit_profile = (id: number, name: string, image: string) => async (dispatch) => {
+export const edit_profile = (id: number, name: string, image: string) => async (dispatch: any) => {
   dispatch({
     type: SET_AUTH_LOADING,
   })
@@ -295,7 +295,7 @@ export const edit_profile = (id: number, name: string, image: string) => async (
 }
 
 // 状態解除
-export const reset_auth_status = () => (dispatch) => {
+export const reset_auth_status = () => (dispatch: any) => {
   dispatch({
     type: RESET_AUTH_STATUS,
   })
