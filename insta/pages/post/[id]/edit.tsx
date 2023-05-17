@@ -6,6 +6,7 @@ import { getPostIds, getPostDetail } from '../../../lib/posts'
 import useSWR from 'swr'
 import Loader from 'react-loader-spinner'
 import Head from 'next/head'
+import { UserIcon } from '@heroicons/react/outline'
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json())
 
@@ -80,16 +81,16 @@ const EditPost = ({ staticPost, id }: any) => {
             required
           />
         </div>
-        <div className="mb-4">
+        {/* <div className="mb-4">
           <div className="mb-1">画像</div>
           <input type="file" onChange={(e: any) => setImage(e.target.files[0])} />
-        </div>
+        </div> */}
         <div className="mb-4">
           <div className="mb-1">
-            説明
+            本文
           </div>
           <textarea
-            className="input-form h-72"
+            className="input-form h-72 bg-white"
             name="content"
             placeholder="説明"
             onChange={onChange}

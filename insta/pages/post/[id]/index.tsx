@@ -7,6 +7,7 @@ import useSWR from 'swr'
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
+import { UserIcon } from '@heroicons/react/outline'
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json())
 
@@ -53,56 +54,26 @@ const DetailPost = ({ staticPost, id }: any) => {
   return (
     <>
       <Head>
-        <title>詳細</title>
+        <title>InstaLike | 詳細</title>
       </Head>
 
       {post && (
-        <div className="max-w-screen-lg mx-auto px-4">
-          <div className="grid grid-cols-3 bg-white border">
-            <div className="col-span-2">
-              <Image
-                src={post.image}
-                className=""
-                alt={post.title}
-                width={1000}
-                height={1000}
-                objectFit="cover"
-              />
-            </div>
-            <div className="col-span-1">
-              <div className="border-b p-4 flex justify-between items-center">
-                <div className="flex items-center space-x-4">
-                  <Image
-                    src={post.user.image}
-                    className="rounded-full"
-                    alt={post.title}
-                    width={40}
-                    height={40}
-                  />
-                  <div>
-                    <div>{post.user.name}</div>
-                    <div>{post.title}</div>
-                  </div>
+        <div className='max-w-screen-lg mx-auto px-4'>
+            {user && user.id === post.user.id && (
+              <div className="text-sm flex space-x-4">
+                <div>
+                  <Link href={`/post/${post.id}/edit`} >
+                    <div className='border px-5 py-2 mt-5 mb-4 text-white bg-green-700 rounded'>編集</div>
+                  </Link>
                 </div>
-                {user && user.id === post.user.id && (
-                  <div className="text-sm flex space-x-4">
-                    <div>
-                      <Link href={`/post/${post.id}/edit`}>
-                        編集
-                      </Link>
-                    </div>
-                    <div className="cursor-pointer" onClick={deletePost}>
-                      削除
-                    </div>
-                  </div>
-                )}
-              </div>
-              <div className="whitespace-pre p-4">
-                <div className="leading-relaxed break-words whitespace-pre-wrap">
-                  {post.content}
+                <div className="cursor-pointer" onClick={deletePost}>
+                  <div className='border px-5 py-2 mt-5 mb-4 text-white bg-red-600 rounded'>削除</div>
                 </div>
               </div>
-            </div>
+            )}
+          <div className=" bg-white border">
+            <div className='text-2xl p-5 border-l-4 border-blue-300 ml-5 my-5 border-solid'>{post.title}</div>
+            <div className='p-4'>{post.content}</div>
           </div>
         </div>
       )}

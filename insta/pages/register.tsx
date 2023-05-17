@@ -49,7 +49,7 @@ const Register = () => {
           <div className="mb-1">
             名前
           </div>
-          <input type="text" className="input-form" name='name' placeholder="フルスタックチャンネル" onChange={onChange} value={name} required />
+          <input type="text" className="input-form" name='name' placeholder="ベイス太郎" onChange={onChange} value={name} required />
         </div>
 
         <div className="mb-4">

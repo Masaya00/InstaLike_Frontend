@@ -62,16 +62,16 @@ const Profile = () => {
             className="input-form"
             type="text"
             name="name"
-            placeholder="フルスタックチャンネル"
+            placeholder="ベイス太郎"
             onChange={onChange}
             value={name}
             required
           />
         </div>
-        <div className="mb-4">
+        {/* <div className="mb-4">
           <div className="mb-1">プロフィール画像</div>
           <input type="file" onChange={(e: any) => setImage(e.target.files[0])} />
-        </div>
+        </div> */}
 
         <div className="flex justify-center">
           {/* {loading ? (
