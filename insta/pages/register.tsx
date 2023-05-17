@@ -40,7 +40,7 @@ const Register = () => {
   return (
     <div>
       <Head>
-        <title>有料会員サイト | アカウント登録</title>
+        <title> InstaLike | アカウント登録</title>
       </Head>
       <div className="text-center text-2x1 mb-5">アカウント登録</div>
 

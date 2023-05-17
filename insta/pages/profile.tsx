@@ -49,7 +49,7 @@ const Profile = () => {
   return (
     <>
       <Head>
-        <title>FullStackChannel | プロフィール</title>
+        <title> InstaLike | プロフィール</title>
       </Head>
 
       <div className="text-center text-2xl mb-5">プロフィール</div>

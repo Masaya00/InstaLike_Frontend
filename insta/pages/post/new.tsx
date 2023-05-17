@@ -40,7 +40,7 @@ const NewPost = () => {
   return (
     <>
       <Head>
-        <title>FullStackChannel | 新規投稿</title>
+        <title> InstaLike | 新規投稿</title>
       </Head>
 
       <div className="text-center text-2xl mb-5">新規投稿</div>

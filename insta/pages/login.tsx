@@ -42,7 +42,7 @@ const Login = () => {
   return (
     <div>
       <Head>
-        <title>有料会員サイト | ログイン</title>
+        <title>InstaLike | ログイン</title>
       </Head>
       <div className="text-center text-2xl mb-5">
         ログイン

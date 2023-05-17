@@ -48,7 +48,7 @@ const Index = ({ staticPosts }: any) => {
   return (
     <>
       <Head>
-        <title>FullStackChannel</title>
+        <title>InstaLike</title>
       </Head>
       <div className="max-w-screen-lg mx-auto">
         <div className="grid grid-cols-3 gap-4">

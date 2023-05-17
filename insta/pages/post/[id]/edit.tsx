@@ -61,7 +61,7 @@ const EditPost = ({ staticPost, id }: any) => {
   return (
     <>
       <Head>
-        <title>FullStackChannel | 投稿編集</title>
+        <title> InstaLike | 投稿編集</title>
       </Head>
 
       <div className="text-center text-2xl mb-5">投稿編集</div>
